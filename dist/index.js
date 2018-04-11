@@ -27,7 +27,7 @@ var app = (0, _express2.default)();
 app.use(_bodyParser2.default.json());
 app.use(_MovieIdeasRoutes2.default);
 
-var port = process.env.PORT || 3001;
+var port = process.env.PORT || 3101;
 app.listen(port, function () {
   console.log("Listening on port:" + port);
 });
