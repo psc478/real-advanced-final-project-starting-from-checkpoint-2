@@ -19,15 +19,25 @@ var _mongoose2 = _interopRequireDefault(_mongoose);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //import movieIdeas from "./movieIdeas";
+require("dotenv").config();
+
+
 _mongoose2.default.set("debug", true);
 _mongoose2.default.Promise = global.Promise;
 _mongoose2.default.connect("mongodb://psc478:psc478@ds131329.mlab.com:31329/advanced-checkpoint-2");
 
 var app = (0, _express2.default)();
+
+app.get("/publicinformation", function (req, res) {
+  res.send("Anyone can see this");
+});
+
+app.use(_express2.default.static("public"));
+
 app.use(_bodyParser2.default.json());
 app.use(_MovieIdeasRoutes2.default);
 
-var port = process.env.PORT || 3101;
+var port = process.env.PORT || 3001;
 app.listen(port, function () {
   console.log("Listening on port:" + port);
 });

@@ -1,5 +1,6 @@
 
 //import movieIdeas from "./movieIdeas";
+require("dotenv").config();
 import express from "express";
 import bodyParser from "body-parser";
 import MovieIdeasRoutes from "./routes/MovieIdeasRoutes"
@@ -10,10 +11,17 @@ mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://psc478:psc478@ds131329.mlab.com:31329/advanced-checkpoint-2");
 
 const app = express();
+
+app.get("/publicinformation", function (req, res) {
+  res.send("Anyone can see this");
+});
+
+app.use(express.static("public"));
+
 app.use(bodyParser.json());
 app.use(MovieIdeasRoutes);
 
-const port = process.env.PORT || 3101;
+const port = process.env.PORT || 3001;
 app.listen(port, () => {
   console.log(`Listening on port:${port}`);
 });
