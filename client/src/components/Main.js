@@ -1,36 +1,31 @@
 import React, { Component } from "react";
-import MovieIdeasContainer from "../containers/MovieIdeasContainer";
-import CreateThingsContainer from "../containers/CreateThingsContainer";
+import BalanceContainer from "../containers/BalanceContainer";
+import LadderContainer from "../containers/LadderContainer";
+import Chart from "./Chart";
+import OrdersContainer from "../containers/OrdersContainer";
 
 class Main extends Component {
   constructor() {
     super();
-    this.state = {page: "home"};
+    this.state = {page: "buy"};
   }
   render(){
-    if (this.state.page === "home"){
-      return(
-        <div>
-          <h1>Movie Ideas Homepage</h1>
-          <button onClick={() => {
-            this.setState({
-              page: "list"
-            });
-          }
-          }>
-            List Movie Ideas
-          </button>
-          <button onClick={() => {
-            this.setState({
-              page: "create"
-            });
-          }
-          }>
-            Create Movie Idea
-          </button>
+    return (
+      <div>
+        <div id="orderForm" style={{float: "left", width: "49%"}}>
+          <h1>ORDER FORM</h1>
+          <BalanceContainer />
+          <LadderContainer />
         </div>
-      )
-    }else if (this.state.page === "list") {
+        <div id="chartAndOpenOrders" style={{float: "left", width: "49%"}}>
+          <Chart />
+          <OrdersContainer />
+        </div>
+      </div>
+    );
+
+    //should put the buy/sell states in a component dedicated to the orderMaking
+    /*if (this.state.page === "buy") {
       return(
         <div>
           <div style={{float: "left", width: "49%"}}>
@@ -39,7 +34,7 @@ class Main extends Component {
           </div>
           <button style={{float: "left", width: "49%"}} onClick={() => {
             this.setState({
-              page: "create"
+              page: "sell"
             });
           }
           }>
@@ -47,12 +42,12 @@ class Main extends Component {
           </button>
         </div>
       )
-    }else if (this.state.page === "create") {
+    }else if (this.state.page === "sell") {
       return(
         <div>
           <button style={{float: "left", width: "49%"}} onClick={() => {
             this.setState({
-              page: "list"
+              page: "buy"
             });
           }
           }>
@@ -76,7 +71,7 @@ class Main extends Component {
           <p>[Basic page]</p>
         </div>
       );
-    }
+    }*/
   }
 }
 export default Main;

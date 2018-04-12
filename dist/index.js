@@ -24,7 +24,7 @@ require("dotenv").config();
 
 _mongoose2.default.set("debug", true);
 _mongoose2.default.Promise = global.Promise;
-_mongoose2.default.connect("mongodb://psc478:psc478@ds131329.mlab.com:31329/advanced-checkpoint-2");
+_mongoose2.default.connect("mongodb://psc478:" + process.env.MLABPW + "@ds113785.mlab.com:13785/final-trading-exchange-clone");
 
 var app = (0, _express2.default)();
 

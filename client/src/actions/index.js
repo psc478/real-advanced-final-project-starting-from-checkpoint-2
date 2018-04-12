@@ -1,7 +1,7 @@
-export function loadMovieIdeas() {
+export function loadBalances() {
   return function (dispatch) {
     //console.log("loadMovieIdeas working");
-    fetch("/movieIdeas",{
+    fetch("/balances",{
       headers : {
         "Content-Type": "application/json",
         "Accept": "application/json"
@@ -9,25 +9,51 @@ export function loadMovieIdeas() {
     })
     .then( (response) => {
       return response.json();
-    }).then((movieIdeas) => {
-      let stuff = movieIdeasLoaded(movieIdeas);
+    }).then((balances) => {
+      let stuff = balancesLoaded(balances);
       //console.log("loadMovieIdeas dispatched stuff:",stuff);
       dispatch(stuff);
     });
   };
 }
 
-function movieIdeasLoaded(movieIdeas) {
+function balancesLoaded(balances) {
   return {
-    type: "MOVIEIDEAS_LOADED",
-    value: movieIdeas
+    type: "BALANCES_LOADED",
+    value: balances
   };
 }
 
-export function createMovieIdea(v) {
-  console.log("createMovieIdea starting");
+export function loadOrders() {
   return function (dispatch) {
-    fetch("/movieIdeas", {
+    //console.log("loadMovieIdeas working");
+    fetch("/orders",{
+      headers : {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+       }
+    })
+    .then( (response) => {
+      return response.json();
+    }).then((orders) => {
+      let stuff = ordersLoaded(orders);
+      //console.log("loadMovieIdeas dispatched stuff:",stuff);
+      dispatch(stuff);
+    });
+  };
+}
+
+function ordersLoaded(orders) {
+  return {
+    type: "ORDERS_LOADED",
+    value: orders
+  };
+}
+
+export function createLadder(v) {
+  console.log("createLadder starting");
+  return function (dispatch) {
+    fetch("/orders", {
       method: "POST",
       headers : {
         "Content-Type": "application/json",
@@ -35,27 +61,27 @@ export function createMovieIdea(v) {
        },
       body: JSON.stringify(v)
     }).then(() => {
-      console.log("createMovieIdea dispatching");
-      dispatch(loadMovieIdeas());
+      console.log("createLadder dispatching");
+      dispatch(loadOrders());
     });
   };
 }
 
-export function deleteMovieIdea(id) {
-  console.log("deleteMovieIdea id:",id);
+export function cancelOrder(id) {
+  console.log("cancelOrder id:",id);
   return function (dispatch) {
-    fetch("/movieIdeas/"+id, {
+    fetch("/orders/"+id, {
       method: "DELETE",
       body: JSON.stringify(id)
     }).then(() => {
-      console.log("deleteMovieIdea dispatching");
-      dispatch(loadMovieIdeas());
+      console.log("cancelOrder dispatching");
+      dispatch(loadOrders());
     });
   };
 }
 
 ////////////////////////////////////////////////////////////////////
-
+/*
 export function getMovieIdea(id) {
   return function (dispatch) {
     console.log("getMovieIdea working");
@@ -77,3 +103,4 @@ function getMovieIdeaDone(movieIdea) {
     value: movieIdea
   };
 }
+*/

@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom";
 
 function Mapper(props) {
 
@@ -13,15 +12,15 @@ function Mapper(props) {
       userDivs = props.data.map((d,i) => {
         return (
           <div key={i}>
-            <h3>{d[props.field]}</h3>
-            <p>{d[props.field1]} {d[props.field2]}</p>
-            <Link to={"/" + props.path + "/" + d._id}> View </Link>
+            {d[props.field]} BTC |
+            {d[props.field1]} | 
+            OPEN
             <button onClick={() => {
                   //console.log("Delete Button props.deleteMovieIdea:",props.deleteMovieIdea);
-                  props.deleteMovieIdea(d._id);
+                  props.cancelOrder(d._id);
               }
               }>
-               Delete
+               Cancel
            </button>
           </div>
         );

@@ -1,5 +1,4 @@
 export default {
-  //currentPage: "landing",
-  movieIdeas: [],
-  movieIdea: {}
+  balances: [],
+  orders: []
 };

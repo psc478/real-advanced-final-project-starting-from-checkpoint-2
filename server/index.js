@@ -8,7 +8,7 @@ import mongoose from "mongoose";
 
 mongoose.set("debug", true);
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://psc478:psc478@ds131329.mlab.com:31329/advanced-checkpoint-2");
+mongoose.connect("mongodb://psc478:"+process.env.MLABPW+"@ds113785.mlab.com:13785/final-trading-exchange-clone");
 
 const app = express();
 

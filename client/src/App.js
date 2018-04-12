@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
 import Main from "./components/Main";
-import oneMovieIdeaContainer from "./containers/oneMovieIdeaContainer";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 //Look at early homework to check how to make a single-page app with landing page, "create" link and "list" link
@@ -11,7 +10,9 @@ class App extends Component {
     this.state = {users: []} //using same line as in express practice, neither has users in final product
   }
   componentDidMount() {
-    this.props.loadMovieIdeas();
+    this.props.loadOrders();
+    this.props.loadUSDBalance();
+    this.props.loadBTCBalance();
   }
   render() {
     return (
@@ -19,7 +20,6 @@ class App extends Component {
         <div>
           <Switch>
             <Route exact path="/" component={Main}/>
-            <Route path="/movieIdea/:id" component={oneMovieIdeaContainer} />
           </Switch>
         </div>
       </BrowserRouter>
