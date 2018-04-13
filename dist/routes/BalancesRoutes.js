@@ -17,8 +17,8 @@ var router = _express2.default.Router();
 
 router.get("/movieIdeas", _MovieIdeasController.list);
 router.get("/movieIdeas/:movieIdeaID", _MovieIdeasController.show);
-router.post("/movieIdeas", _MovieIdeasController.create);
+//router.post("/movieIdeas", create);
 router.put("/movieIdeas/:movieIdeaID", _MovieIdeasController.update);
-router.delete("/movieIdeas/:movieIdeaID", _MovieIdeasController.remove);
+//router.delete("/movieIdeas/:movieIdeaID", remove);
 
 exports.default = router;

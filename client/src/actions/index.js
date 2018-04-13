@@ -1,6 +1,6 @@
 export function loadBalances() {
   return function (dispatch) {
-    //console.log("loadMovieIdeas working");
+    console.log("loadBalances working");
     fetch("/balances",{
       headers : {
         "Content-Type": "application/json",
@@ -11,7 +11,7 @@ export function loadBalances() {
       return response.json();
     }).then((balances) => {
       let stuff = balancesLoaded(balances);
-      //console.log("loadMovieIdeas dispatched stuff:",stuff);
+      console.log("loadBalances dispatched stuff:",stuff);
       dispatch(stuff);
     });
   };
@@ -26,7 +26,7 @@ function balancesLoaded(balances) {
 
 export function loadOrders() {
   return function (dispatch) {
-    //console.log("loadMovieIdeas working");
+    console.log("loadOrders working");
     fetch("/orders",{
       headers : {
         "Content-Type": "application/json",
@@ -37,7 +37,7 @@ export function loadOrders() {
       return response.json();
     }).then((orders) => {
       let stuff = ordersLoaded(orders);
-      //console.log("loadMovieIdeas dispatched stuff:",stuff);
+      console.log("loadOrders dispatched stuff:",stuff);
       dispatch(stuff);
     });
   };

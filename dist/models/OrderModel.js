@@ -11,23 +11,15 @@ var _mongoose2 = _interopRequireDefault(_mongoose);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var schema = new _mongoose2.default.Schema({
-  title: {
+  size: {
     required: true,
-    type: String
+    type: Number
   },
-  genre: {
-    type: String
-  },
-  logline: {
-    type: String
-  },
-  budget: {
-    type: String
-  },
-  notes: {
-    type: String
+  price: {
+    required: true,
+    type: Number
   }
 });
 
-var MovieIdeaModel = _mongoose2.default.model("MovieIdea", schema);
-exports.default = MovieIdeaModel;
+var OrderModel = _mongoose2.default.model("Order", schema);
+exports.default = OrderModel;

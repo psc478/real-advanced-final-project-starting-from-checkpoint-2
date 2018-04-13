@@ -4,8 +4,8 @@ class Ladder extends React.Component {
   constructor() {
     super();
     this.state = {
-      order: {
-        size: 0,
+      ladderOrder: {
+        ladderSize: 0,
         lowPrice: 0,
         highPrice: 0
       },
