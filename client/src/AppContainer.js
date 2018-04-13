@@ -1,12 +1,15 @@
 import App from "./App";
 import "./App.css";
 import { connect } from "react-redux";
-import {loadMovieIdeas} from "./actions";
+import {loadOrders, loadBalances} from "./actions";
 
 function mapDispatchToProps(dispatch) {
   return {
-    loadMovieIdeas: function () {
-      dispatch(loadMovieIdeas()); //this might need to go on a different Container
+    loadOrders: function () {
+      dispatch(loadOrders());
+    },
+    loadBalances: function () {
+      dispatch(loadBalances());
     }
   };
 }

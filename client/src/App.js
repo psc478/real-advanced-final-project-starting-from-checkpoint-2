@@ -11,8 +11,7 @@ class App extends Component {
   }
   componentDidMount() {
     this.props.loadOrders();
-    this.props.loadUSDBalance();
-    this.props.loadBTCBalance();
+    this.props.loadBalances();
   }
   render() {
     return (

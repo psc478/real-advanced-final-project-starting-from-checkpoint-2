@@ -1,7 +1,6 @@
 import React from "react";
-import BalanceMapper from "./BalanceMapper";
 
-function Balance(props){
+function Chart(props){
 
     //<BalanceMapper data={props.balance} field="usdBalance" field1="btcBalance"/>
 
@@ -12,4 +11,4 @@ function Balance(props){
     );
 }
 
-export default Balance;
+export default Chart;

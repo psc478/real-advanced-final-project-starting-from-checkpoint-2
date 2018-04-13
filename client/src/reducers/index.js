@@ -1,20 +1,20 @@
 import {combineReducers} from "redux";
 
-function movieIdeas(state = [], action) {
-  if (action.type === "MOVIEIDEAS_LOADED") {
+function balances(state = [], action) {
+  if (action.type === "BALANCES_LOADED") {
     return action.value;
   }
   return state;
 }
 
-function movieIdea(state = {}, action) {
-  if (action.type === "GET_MOVIEIDEA_DONE") {
+function orders(state = [], action) {
+  if (action.type === "ORDERS_LOADED") {
     return action.value;
   }
   return state;
 }
 
 const rootReducer = combineReducers({
-  movieIdeas,movieIdea
+  balances,orders
 });
 export default rootReducer;

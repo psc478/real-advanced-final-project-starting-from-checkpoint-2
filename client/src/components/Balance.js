@@ -7,7 +7,7 @@ function Balance(props){
 
     return (
       <div>
-      <BalanceMapper data={props.balances} />
+        <BalanceMapper data={props.balances} />
       </div>
     );
 }

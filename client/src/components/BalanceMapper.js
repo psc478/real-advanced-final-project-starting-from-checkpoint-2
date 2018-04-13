@@ -9,10 +9,17 @@ function BalanceMapper(props) {
       //console.log("Mapper this.props.field1:",this.props.field1);
       //console.log("Mapper this.props.data[0]:",props.data);
 
+/*
+<div>
+  USD: {props.data.usdBalance}
+  BTC: {props.data.btcBalance}
+</div>
+*/
+
     return (
       <div>
-        USD: {props.data.usdBalance}
-        BTC: {props.data.btcBalance}
+        USD: 0
+        BTC: 0
       </div>);
 }
 
