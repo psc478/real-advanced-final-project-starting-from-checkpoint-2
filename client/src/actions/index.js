@@ -81,26 +81,26 @@ export function cancelOrder(id) {
 }
 
 ////////////////////////////////////////////////////////////////////
-/*
-export function getMovieIdea(id) {
+/*//replaced movieIdea with balance, syntax may be wrong if used
+export function getbalance(id) {
   return function (dispatch) {
-    console.log("getMovieIdea working");
-    fetch("/movieIdeas/"+id, {
+    console.log("getbalance working");
+    fetch("/balances/"+id, {
       headers: {
         "Content-Type": "application/json"}
     })
     .then( (response) => {
       return response.json();
     }).then(function(c){
-      console.log("getMovieIdea get c:",c);
-      dispatch(getMovieIdeaDone(c));
+      console.log("getbalance get c:",c);
+      dispatch(getbalanceDone(c));
     });
   };
 }
-function getMovieIdeaDone(movieIdea) {
+function getbalanceDone(balance) {
   return {
-    type: "GET_MOVIEIDEA_DONE",
-    value: movieIdea
+    type: "GET_balance_DONE",
+    value: balance
   };
 }
 */

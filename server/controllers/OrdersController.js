@@ -55,7 +55,7 @@ export function update(request, response) {
 export function remove(request, response) {
   console.log("Remove request.params.id",request.params.orderID);
   OrderModel.findById(request.params.orderID).exec()
-  .then(movieDelete => {
+  .then(cancelOrder => {
     cancelOrder.remove(function (err, cancelOrder) {
       if (err) return handleError(err);
     })

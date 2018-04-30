@@ -6,6 +6,7 @@ const schema = new mongoose.Schema({
     type: Number
   },
   btcBalance: {
+    required:true,
     type: Number
   }
 });

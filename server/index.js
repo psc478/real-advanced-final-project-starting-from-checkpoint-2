@@ -3,12 +3,13 @@
 require("dotenv").config();
 import express from "express";
 import bodyParser from "body-parser";
-import MovieIdeasRoutes from "./routes/MovieIdeasRoutes"
+import BalancesRoutes from "./routes/BalancesRoutes"
+import OrdersRoutes from "./routes/OrdersRoutes"
 import mongoose from "mongoose";
 
 mongoose.set("debug", true);
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://psc478:"+process.env.MLABPW+"@ds113785.mlab.com:13785/final-trading-exchange-clone");
+mongoose.connect("mongodb://psc478:&&VLz5^E0O&B&BNjK9U7R0g!wwRfPPj$%jTwh1&G@ds113785.mlab.com:13785/final-trading-exchange-clone");
 
 const app = express();
 
@@ -19,7 +20,8 @@ app.get("/publicinformation", function (req, res) {
 app.use(express.static("public"));
 
 app.use(bodyParser.json());
-app.use(MovieIdeasRoutes);
+app.use(BalancesRoutes);
+app.use(OrdersRoutes);
 
 const port = process.env.PORT || 3001;
 app.listen(port, () => {

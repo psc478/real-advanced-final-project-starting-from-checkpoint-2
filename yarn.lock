@@ -5888,6 +5888,10 @@ react-scripts@^0.9.5:
   optionalDependencies:
     fsevents "1.0.17"
 
+react-tradingview-widget@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/react-tradingview-widget/-/react-tradingview-widget-1.2.4.tgz#78666e63ae9ba649c5e1d5eb36c908f4df5264c5"
+
 react@^15.5.4:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"

@@ -12,15 +12,15 @@ class Main extends Component {
   render(){
     return (
       <div>
-        <div id="orderForm" style={{float: "left", width: "49%"}}>
-          <h1>ORDER FORM</h1>
-          <BalanceContainer />
+        {/*<div id="orderForm" style={{float: "left", width: "49%"}}>*/}
+          {/*<h1>ORDER FORM</h1>*/}
+          {/*<BalanceContainer />*/}
           <LadderContainer />
-        </div>
-        <div id="chartAndOpenOrders" style={{float: "left", width: "49%"}}>
-          <Chart />
-          <OrdersContainer />
-        </div>
+        {/*</div>*/}
+        {/*<div id="chartAndOpenOrders" style={{float: "left", width: "49%"}}>*/}
+          {/*<Chart />*/}
+          {/*<OrdersContainer />*/}
+        {/*</div>*/}
       </div>
     );
 

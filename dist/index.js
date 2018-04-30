@@ -8,9 +8,9 @@ var _bodyParser = require("body-parser");
 
 var _bodyParser2 = _interopRequireDefault(_bodyParser);
 
-var _MovieIdeasRoutes = require("./routes/MovieIdeasRoutes");
+//var _MovieIdeasRoutes = require("./routes/MovieIdeasRoutes");
 
-var _MovieIdeasRoutes2 = _interopRequireDefault(_MovieIdeasRoutes);
+//var _MovieIdeasRoutes2 = _interopRequireDefault(_MovieIdeasRoutes);
 
 var _mongoose = require("mongoose");
 
@@ -35,7 +35,7 @@ app.get("/publicinformation", function (req, res) {
 app.use(_express2.default.static("public"));
 
 app.use(_bodyParser2.default.json());
-app.use(_MovieIdeasRoutes2.default);
+//app.use(_MovieIdeasRoutes2.default);
 
 var port = process.env.PORT || 3001;
 app.listen(port, function () {

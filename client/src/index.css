@@ -3,3 +3,116 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.majorDiv {
+}
+
+#parentDiv{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  background-color: rgb(41, 53, 61);
+}
+
+#orderFormVert {
+  background-color: rgb(47, 61, 69);
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
+
+#leftVert {
+  width: 33%;
+}
+
+#rightVert {
+  width: 66%;
+  height: 850px;
+}
+
+#balanceDiv {
+  color: white;
+  background-color: rgb(41, 53, 61);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+}
+
+#placeOrderDiv {
+  color: white;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-bottom: 15px;
+  background-color: rgb(73, 82, 91);
+}
+
+#chartDiv {
+  height: 850px;
+}
+
+#listOrdersDiv {
+  color: white;
+  padding-left: 30px;
+  background-color: rgb(41, 53, 61);
+}
+
+#orderHeadings {
+  border-bottom: 3px solid white;
+}
+
+button {
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+}
+
+.redButton {
+  background-color: rgb(255, 105, 57); /* Red */
+}
+
+.greenButton {
+  background-color: rgb(77, 165, 60); /* Green */
+}
+
+.space {
+  width: 100px;
+}
+
+.flexIt {
+  margin: auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.grey {
+  color: rgb(206, 210, 213);
+}
+
+.green {
+  color: rgb(77, 165, 60); /* Green */
+}
+
+.red {
+  color: rgb(255, 105, 57); /* Red */
+}
+
+.dottedLine {
+  border-bottom: 1px dotted rgb(73, 82, 91);
+}
+
+.bigFont {
+  font-size: 20px;
+  float: left;
+  width: 40%;
+}
+
+.greyButton {
+  color: black;
+}

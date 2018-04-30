@@ -3,7 +3,7 @@ import BalanceMapper from "./BalanceMapper";
 
 function Balance(props){
 
-    //console.log("MovieIdeas component props.movieIdeas:", props.movieIdeas[0]);
+    //console.log("balances component props.balances:", props.balances[0]);
 
     return (
       <div>
