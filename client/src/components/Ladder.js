@@ -14,8 +14,8 @@ class Ladder extends React.Component {
         //price: 0
       },
       page: "BUY",
-      usdBalance: 101490.31,
-      btcBalance: 5.26,
+      usdBalance: 101490.31, //pull from GDAX API
+      btcBalance: 5.26, //pull from GDAX API
       orderDivs: [],
       buyToggle: "",
       sellToggle: "",
@@ -23,19 +23,7 @@ class Ladder extends React.Component {
     };
   }
 
-  tickUp() {
-    let newBal = this.state.usdBalance + 1;
-    console.log("usdBalance:",this.state.usdBalance);
-    this.setState({
-      usdBalance: newBal
-    })
-    this.render();
-  }
-
-  changeToSellButton(){
-
-  }
-
+  //keep changeToBuyButton() in this file
   changeToBuyButton(){
     if(this.state.page === "BUY"){
       this.state.buyToggle = <button className="greenButton" onClick={() => {
@@ -54,6 +42,7 @@ class Ladder extends React.Component {
     }
   }
 
+  //keep changeToSellButton() in this file
   changeToSellButton(){
     if(this.state.page === "BUY"){
       this.state.sellToggle = <button className="greyButton" onClick={() => {
@@ -86,6 +75,7 @@ class Ladder extends React.Component {
     }
   }
 
+  //this should add orders to the database, put it in actions (?) cross reference with advanced checkpoint 2
   makeLadder() {
     let newArr = this.state.orderDivs;
     let size = this.state.order.ladderSize/this.state.order.numberOfOrders;
